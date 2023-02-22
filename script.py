@@ -23,7 +23,7 @@ for team in full_league:
     lottery = int(player_pick) <= 14 if (player_pick != 'Undrafted') and (player_pick is not None) else False
     lottery_players += 1 if lottery is True else 0
     full_df.append(player_df.to_dict())
-    time.sleep(0.2)
+    time.sleep(1)
   sum_teams.append({'team': tname, 'lottery_players': lottery_players, 'players': len(team_df['PLAYER_ID'])})
 
 full = pd.DataFrame()
